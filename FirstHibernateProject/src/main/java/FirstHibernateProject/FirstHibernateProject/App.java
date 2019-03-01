@@ -11,7 +11,7 @@ import org.hibernate.cfg.Configuration;
  *
  */
 
-/*Author Nirmalmahesh S */
+/*Author: Nirmalmahesh S */
 public class App 
 {
     public static void main( String[] args )
