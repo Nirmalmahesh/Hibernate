@@ -16,7 +16,7 @@ public class App
     {
     	/*Name n = new Name("Nirmalmahesh"," ","Subramani");
     	
-        Alien a1 = new Alien(n,"Gray");*/
+        Alien a1 = new Alien(n,"Gray");*//**/
     	
     	Alien a1;
     	
