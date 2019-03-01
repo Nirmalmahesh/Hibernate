@@ -49,7 +49,7 @@ public class Alien {
 	}
 	@Override
 	public String toString() {
-		return "Alien [aid=" + aid + ", name=" + name + ", acolor=" + acolor + "]";
+		return "Alien [aid=" + aid + ", name=" + name + ", acolor=" + acolor +  "]";
 	}
 	
 
