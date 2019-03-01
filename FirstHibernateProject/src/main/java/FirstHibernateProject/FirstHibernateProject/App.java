@@ -10,6 +10,8 @@ import org.hibernate.cfg.Configuration;
  * Hello world!
  *
  */
+
+/*Author Nirmalmahesh S */
 public class App 
 {
     public static void main( String[] args )
