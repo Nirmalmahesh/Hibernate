@@ -16,11 +16,11 @@ public class App
 {
     public static void main( String[] args )
     {
-    	/*Name n = new Name("Nirmalmahesh"," ","Subramani");
+    	Name n = new Name("Mohanraj"," ","Sanmugan");
     	
-        Alien a1 = new Alien(n,"Gray");*/
+        Alien a1 = new Alien(n,"Black");
     	
-    	Alien a1;
+    	
     	
     	
 
@@ -35,7 +35,7 @@ public class App
         
         Transaction tx = session.beginTransaction();
         
-        //session.save(a1);
+        session.save(a1);
        
         a1 = (Alien) session.get(Alien.class, 1);
         
