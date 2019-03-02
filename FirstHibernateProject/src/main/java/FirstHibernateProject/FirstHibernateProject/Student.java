@@ -1,11 +1,14 @@
 package FirstHibernateProject.FirstHibernateProject;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 
 @Entity
@@ -19,16 +22,11 @@ public class Student {
 	int marks;
 	
 
-	@OneToOne
-	Laptop laptop;
+	@OneToMany
+	List<Laptop> laptop;
 	
 	
-	public Laptop getLaptop() {
-		return laptop;
-	}
-	public void setLaptop(Laptop laptop) {
-		this.laptop = laptop;
-	}
+	
 	public int getSid() {
 		return sid;
 	}
@@ -52,7 +50,14 @@ public class Student {
 		super();
 	}
 	
-	public Student(String sname, int marks, Laptop laptop) {
+	
+	public List<Laptop> getLaptop() {
+		return laptop;
+	}
+	public void setLaptop(List<Laptop> laptop) {
+		this.laptop = laptop;
+	}
+	public Student(String sname, int marks, List<Laptop> laptop) {
 		super();
 		this.sname = sname;
 		this.marks = marks;

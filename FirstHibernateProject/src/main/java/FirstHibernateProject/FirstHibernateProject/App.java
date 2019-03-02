@@ -1,5 +1,8 @@
 package FirstHibernateProject.FirstHibernateProject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.hibernate.Session;
 import org.hibernate.SessionBuilder;
 import org.hibernate.SessionFactory;
@@ -23,14 +26,23 @@ public class App
         */
     	
     	Laptop l1 = new Laptop("HP");
+    	Laptop l2 = new Laptop("Dell");
+    	Laptop l3 = new Laptop("Acer");
+    	Laptop l4 = new Laptop("Toshiba");
     	
+    	List<Laptop> laptop_data = new ArrayList<Laptop>();
+    	laptop_data.add(l1);
+    	laptop_data.add(l2);
     	
-    	Student s1= new Student("Nirmalmahesh S",85,l1);
+    	Student s1= new Student("Nirmalmahesh S",85,laptop_data);
     	
         Session session = new Configuration().configure()
         		.addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class)
         		.buildSessionFactory().openSession();
         session.save(l1);
+        session.save(l2);
+        session.save(l3);
+        session.save(l4);
         session.save(s1);
         
         
