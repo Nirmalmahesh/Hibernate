@@ -27,6 +27,10 @@ public class Laptop {
 	public Laptop() {
 		super();
 	}
+	public Laptop(String model) {
+		super();
+		this.model = model;
+	}
 	
 	
 

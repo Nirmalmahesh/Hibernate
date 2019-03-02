@@ -21,9 +21,18 @@ public class App
         SessionFactory sf = cf.buildSessionFactory();
         Session session = sf.getCurrentSession();
         */
+    	
+    	Laptop l1 = new Laptop("HP");
+    	
+    	
+    	Student s1= new Student("Nirmalmahesh S",85,l1);
+    	
         Session session = new Configuration().configure()
         		.addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class)
         		.buildSessionFactory().openSession();
+        session.save(l1);
+        session.save(s1);
+        
         
         Transaction tx = session.beginTransaction();
         
