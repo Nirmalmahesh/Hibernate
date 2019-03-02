@@ -22,6 +22,7 @@ public class App
         Session session = sf.getCurrentSession();
         */
         Session session = new Configuration().configure()
+        		.addAnnotatedClass(Student.class).addAnnotatedClass(Laptop.class)
         		.buildSessionFactory().openSession();
         
         Transaction tx = session.beginTransaction();
