@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +23,8 @@ public class Student {
 	int marks;
 	
 
-	@OneToMany
+	//We can override default lazy behavier by mentioning EAGER On mapping
+	@OneToMany(fetch=FetchType.EAGER)
 	List<Laptop> laptop;
 	
 	
